@@ -1,0 +1,17 @@
+header {
+	.grow{
+		flex-grow: 1;
+	}
+	.btnAvatar{
+		height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    img{
+    	width: 100%;
+    	height: 100%;
+    }
+	}
+}

@@ -1,0 +1,23 @@
+.app {
+	background: black;
+}
+
+.appContent {
+  margin: 50px 0; // for fixed navbar
+  position: relative;
+  &.show{
+  	display: flex;
+	}
+}
+.noLandscape{
+	&.show{
+  	display: flex;
+	}
+}
+.notifs {
+  margin: 15px 0;
+}
+
+:global(.form-control-feedback) {
+  text-align: inherit;
+}

@@ -1,0 +1,266 @@
+
+  div.login{
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10002;
+    background-color: #282b33;
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    color:white;
+    justify-content: center;
+    z-index: 10003;
+    overflow: auto;
+
+    div.loginForm{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      width: 100%;
+      left: 0;
+      top: 0;
+
+      div.formulario{
+        display: block;
+        text-align: center;
+        margin-top: 5rem;
+        width: 40vw;
+        position: relative;
+        text-align: center;
+
+        div.preForm{
+          width: 100%;
+          text-align: center;
+
+          form{
+            margin: 0rem 2rem;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            display: block;
+
+            input[type=number] {
+              padding:5px; border:4px solid rgb(182, 190, 209); 
+              border: px solid #b6bed1;
+              border-radius: 25px;
+              display: inline-block;
+              color: rgb(255, 255, 255);
+              background: rgba(255, 255, 255, 0);
+              -moz-appearance:textfield;
+
+              margin: 0 auto;
+              width: auto;
+            }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+            input[type=number]:focus {
+              outline: none; 
+            }
+            input[type=submit] {
+                padding:5px 15px; background:#ccc; border:0 none;
+                cursor:pointer;
+                -webkit-border-radius: 5px;
+                border-radius: 5px; }
+          }
+        }
+
+        p{
+          margin-top: 0.8rem;
+          color: white;
+
+          &.specialP{
+            display: inline-flex;
+            float: left;
+          }
+        }
+        div.btnEnviar{
+          display: inline-block;
+          float: right;
+          padding: 0.5rem 2.5rem;
+          position: relative;
+          z-index: 200;
+          
+          p{
+            margin: 0;
+            font-size: 100%;
+          }
+        }
+
+        .message {
+          font-size: 0.7rem;
+          margin: 1rem;
+        }
+
+        .btnLogin{
+          position:relative;
+          display: inline-block;
+          height: 100%;
+          margin: 0 5rem;
+
+          &:hover{
+            text-decoration:none;
+            .imgMain{
+              opacity:0;
+              transition: opacity 300ms linear;
+            }          
+            .imgMainHover{
+              opacity:1;
+              transition: opacity 300ms linear;
+            }
+          }
+          
+          .imgMain{
+            position:absolute;
+            opacity:1;
+            transition: opacity 300ms linear;
+          }          
+          .imgMainHover{
+            opacity:0;
+            transition: opacity 300ms linear;
+          }
+          .cicleIcon{
+            display: inline-block;
+            border-radius: 50%;
+            padding: 2rem;
+            border: solid 5px #B7BCD3;
+          }
+        }
+      }
+
+      .titleLogin{
+        font-family: 'RobotoLight';
+        font-weight: normal;
+        font-size: 5em;
+        margin-bottom: 60px;
+        color: #FDF9F4;
+        line-height: 1em;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+
+//Laptops
+@media screen and (max-width: 1600px)  and (max-height: 800px) {
+  div.login div.loginForm {
+    padding-top:0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  div.login div.loginForm .titleLogin{      
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 30px;
+  }
+  div.login div.loginForm div.formulario{
+    font-size: inherit;
+    margin-top: 3rem;
+  }
+  div.login div.loginForm div.formulario .btnLogin .cicleIcon{
+    padding: 1.5rem;
+  }
+}
+
+
+@media only screen and (max-width: 1000px){
+    .login{
+      .loginForm{
+        .formulario{
+          p{
+            font-size: 0.8rem;
+          }
+          margin-top: 1.3rem!important;
+          width: 100%!important;
+          .preForm form {
+            margin: 0rem 2rem;
+            justify-content: center;
+            align-items: center;
+            text-align: -webkit-center;
+            input[type=number] {
+              width: 90%;
+            }
+          }
+          .specialP {
+            margin-top:0.3;
+          }
+          .btnEnviar{
+            padding: 0.4rem 1.3rem;
+
+            p {
+              font-size: 1rem;
+              margin-top:0;
+            }
+           }
+        }
+      }
+    }
+}
+
+//Ipad
+@media only screen and (min-width: 1023px) and (max-width: 1024px) and (orientation: landscape) {
+  .login .loginForm .titleLogin {
+    font-size: 4em;
+    margin-bottom: 30px;
+  }
+  .login .loginForm .formulario .btnLogin .cicleIcon {
+    padding: 1.5rem;
+  }
+  .login .loginForm .formulario {
+    margin-top: 3.8rem;
+  }
+
+  body.home{
+
+    div.login {
+
+      div.loginForm {
+
+        div.formulario{
+          width: 60vw;
+
+          p.specialP{
+            font-size: 1.5em;
+            line-height: 0.5em;
+          }
+          div.preForm{
+            form{
+              input{
+                width: 30%;
+              }
+            }
+          }
+
+          div div.btnEnviar{
+            font-size: 1.5em;
+            padding: 0.5rem 2.5rem;
+          }
+        }
+      }
+    }
+
+    &.Login{
+      div.login {
+        div.loginForm {
+          div.formulario{
+            width: 100%;
+            a.btnLogin div.cicleIcon{
+              padding: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  } 
+}
